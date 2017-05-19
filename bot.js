@@ -3,7 +3,8 @@ var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
 var botAction;
-var usrInput = JSON.parse(this.req.chunks[0]);
+var usrInput = JSON.parse(this.req.chunks[0]),
+	randomshit = /^\garb$/;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
