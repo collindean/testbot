@@ -13,17 +13,17 @@ function respond() {
   var usrtext = request.text.ToLowerCase();
       
 
-  if(request.text && botRegex.test(request.text)) {
+  if(request.text && botRegex.test(usrtext) {
     this.res.writeHead(200);
     botAction = 1;
     postMessage();
     this.res.end();
-  } else if(request.text && botHelp.test(request.text)) {
+  } else if(request.text && botHelp.test(usrtext)) {
     this.res.writeHead(200); 
     botAction = 2;
     helpMessage();
     this.res.end();    
-  } else if (request.text && botWeapon.test(request.text)) {
+  } else if (request.text && botWeapon.test(usrtext)) {
     this.res.writeHead(200);
     botAction = 3;
     whatisMessage();
