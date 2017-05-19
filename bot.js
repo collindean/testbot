@@ -113,7 +113,7 @@ options = {
 function whatisMessage() {
 var botResponse, options, body, botReq;
 var slicedText = usrInput.slice(6);
-var botResponse = "i don't know, you tell me";
+var botResponse;
 var troy = "gay";
 
 if (slicedText == "troy") {
