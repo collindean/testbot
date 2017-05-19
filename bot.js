@@ -14,7 +14,7 @@ function respond() {
     botAction = 1;
     postMessage();
     this.res.end();
-  } else if {
+  } else if(request.text && botHelp.test(request.text)) {
     this.res.writeHead(200); 
     botAction = 2;
     postMessage();
