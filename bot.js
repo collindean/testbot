@@ -27,11 +27,12 @@ function respond() {
 }
 
 function postMessage() {
-  var botResponse, helpResponse, brokeResponse, options, body, botReq;
+  var botResponse, options, body, botReq;
 
-  botResponse = "hi";
-  helpResponse = "well i CAN help";
-  brokeResponse = "congrats, you broke me";
+  botResponse = "can i help you?";
+  var hiResponse = "hi";
+  var helpResponse = "well i CAN help";
+  var brokeResponse = "congrats, you broke me";
 
   options = {
     hostname: 'api.groupme.com',
@@ -44,12 +45,14 @@ function postMessage() {
     "text" : "hi"
   };
 if (botAction = 1) {
-  console.log('sending ' + botResponse + ' to ' + botID);
+  botResponse = hiResponse;
  } else if (botAction = 2) {
-  console.log('sending ' + helpResponse + ' to ' + botID);
+  botResponse = helpResponse;
  ) else {
-  console.log('sending ' + brokeResponse + ' to ' + botID);
+  botResponse = brokeResponse;
 }
+
+console.log('sending ' + botResponse + ' to ' + botID);
 
   botReq = HTTPS.request(options, function(res) {
       if(res.statusCode == 202) {
