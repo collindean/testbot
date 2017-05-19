@@ -126,8 +126,9 @@ function countdownMessage() {
 */
      var botResponse, options, body, botReq;
 
-     botReponse = daysLeft + " days, " + hoursLeft + " hours, " + minutesLeft + " minutes, and " + secondsLeft + " seconds left until next session.";
-
+ /*    botReponse = daysLeft + " days, " + hoursLeft + " hours, " + minutesLeft + " minutes, and " + secondsLeft + " seconds left until next session.";
+*/
+	botResponse = "butt";
   options = {
     hostname: 'api.groupme.com',
     path: '/v3/bots/post',
