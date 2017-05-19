@@ -17,7 +17,7 @@ function respond() {
   } else if(request.text && botHelp.test(request.text)) {
     this.res.writeHead(200); 
     botAction = 2;
-    postMessage();
+    helpMessage();
     this.res.end();    
   } else {
     console.log("don't care");
