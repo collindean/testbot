@@ -10,7 +10,7 @@ function respond() {
       botHelp = /^\help$/,
       botWeapon = /^\whatis$/;      
 
-  if(request.text && botRegex.test(request.text) {
+  if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     botAction = 1;
     postMessage();
