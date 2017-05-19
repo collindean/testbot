@@ -1,7 +1,7 @@
 {
-  "name": "Cool guy bot",
-  "description": "Basic Groupme Bot written in Node",
+  "name": "DescentBot",
+  "description": "Basic bot designed to provide helpful information for the tabletop role-playing game, Descent, designed by the glorious Troy Church",
   "repository": "https://github.com/petemcgrath/cool-guy-bot",
-  "logo": "http://www.tailgate365.com/wp-content/uploads/2011/06/tom-hanks-906.jpg",
+  "logo": "https://i.groupme.com/400x400.png.f87199ac5680460282b607350fe7a1a8"
   "keywords": []
 }
