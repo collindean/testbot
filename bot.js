@@ -116,7 +116,7 @@ minutesLeft -= 1;
 if (minutesLeft > 0) {
 hoursLeft -= 1;
 } 
-if (hoursLeft > 0  {
+if (hoursLeft > 0)  {
 daysLeft -= 1;
 }
 botReponse = daysLeft + " days, " + hoursLeft + " hours, " + minutesLeft + " minutes, and " + secondsLeft + " seconds left until next session.";
