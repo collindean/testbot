@@ -42,21 +42,21 @@ var botResponse = "i don't know, you tell me";
 if (slicedText == "troy") {
 	botResponse = "gay"
 } else if (slicedText == "vis") {
-	botResponse = "Vis is a currency in this universe, which can be farmed/mined from many resources. It can be found in water, vains, and many other options that I don't know."
+	botResponse = "Vis is a currency in this universe, which can be farmed/mined from many resources. It can be found in water, vains, and many other options that I don't know.";
 } else if (slicedText == "light armor") {
-	botResponse = "Soak class: 2, -1 evade, -5 movement speed, -5 climbing and swimming speed" 
+	botResponse = "Soak class: 2, -1 evade, -5 movement speed, -5 climbing and swimming speed";
 } else if (slicedText == "medium armor") {
-	botResponse = "Soak class: 3, -5 movement speed, -10 climbing and swimming speed" 
+	botResponse = "Soak class: 3, -5 movement speed, -10 climbing and swimming speed";
 } else if (slicedText == "heavy armor") {
-	botResponse = "Soak class: 4, -3 evade, -10 movement speed, -15 climbing and swimming speed" 
+	botResponse = "Soak class: 4, -3 evade, -10 movement speed, -15 climbing and swimming speed";
 } else if (slicedText == "light melee") {
-	botResponse = "DC: 4, Equip AP: 1, Attack AP: 2, easily concealable and usable in one hand" 
+	botResponse = "DC: 4, Equip AP: 1, Attack AP: 2, easily concealable and usable in one hand";
 } else if (slicedText == "medium melee") {
-	botResponse = "DC: 6, Equip AP: 1, Attack AP: 2, not concealable, and useable in one hand" 
+	botResponse = "DC: 6, Equip AP: 1, Attack AP: 2, not concealable, and useable in one hand";
 } else if (slicedText == "heavy melee") { 
-	botResponse = "DC: 8, Equip AP: 2, Attack: 2, not concealable, and requires two hands to wield effectively. One handing a heavy weapon results in a -4 to strike and accuracy rolls"
+	botResponse = "DC: 8, Equip AP: 2, Attack: 2, not concealable, and requires two hands to wield effectively. One handing a heavy weapon results in a -4 to strike and accuracy rolls";
 } else {
-	botReponse = "i don't quite follow, try being coherent" 
+	botReponse = "i don't quite follow, try being coherent"; 
 }
 
 options = {
