@@ -33,6 +33,7 @@ function respond() {
 }
 
 function whatisMessage() {
+var botResponse, options, body, botReq;
 var request = JSON.parse(this.req.chunks[0]);
 var usrinput = "fucking end me";
 
