@@ -80,6 +80,8 @@ function helpMessage() {
   var helpResponse = "well i CAN help";
   var brokeResponse = "congrats, you broke me";
 
+  botResponse = helpResponse;
+
   options = {
     hostname: 'api.groupme.com',
     path: '/v3/bots/post',
