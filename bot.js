@@ -102,7 +102,7 @@ function respond() {
 
 function countdownMessage() {
      var d = new Date();
-     var w = getUTCMilliseconds() - 21600000;
+     var w = d.getUTCMilliseconds() - 21600000;
      d.setTime(w);
      var n = d.getDay();
      var h = d.getHours();
