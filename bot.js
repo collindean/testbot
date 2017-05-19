@@ -28,7 +28,7 @@ function respond() {
     botAction = 3;
     whatisMessage();
     this.res.end();
-    } else if (request.text && botD12.test(request.text)) {
+    } else if (request.text == botD12) {
     this.res.writeHead(200);
     botAction = 4; 
     rollD12();
