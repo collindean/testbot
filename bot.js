@@ -101,7 +101,7 @@ function respond() {
 }
 
 function countdownMessage() {
-     var d = new Date.now();
+     var d =  Date.now();
      var n = d.getDay();
      var h = d.getHours();
      var m = d.getMinutes();
