@@ -49,11 +49,11 @@ if (slicedText == "troy") {
 	botResponse = "Soak class: 3, -5 movement speed, -10 climbing and swimming speed" 
 } else if (slicedText == "heavy armor") {
 	botResponse = "Soak class: 4, -3 evade, -10 movement speed, -15 climbing and swimming speed" 
-} else if (slicedText == "light melee" {
+} else if (slicedText == "light melee") {
 	botResponse = "DC: 4, Equip AP: 1, Attack AP: 2, easily concealable and usable in one hand" 
-} else if (slicedText == "medium melee" {
+} else if (slicedText == "medium melee") {
 	botResponse = "DC: 6, Equip AP: 1, Attack AP: 2, not concealable, and useable in one hand" 
-} else if (slicedText == "heavy melee" { 
+} else if (slicedText == "heavy melee") { 
 	botResponse = "DC: 8, Equip AP: 2, Attack: 2, not concealable, and requires two hands to wield effectively. One handing a heavy weapon results in a -4 to strike and accuracy rolls"
 } else {
 	botReponse = "i don't quite follow, try being coherent" 
