@@ -3,6 +3,7 @@ var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
 var botAction;
+var usrInput = JSON.parse(this.req.chunks[0]);
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
@@ -34,7 +35,7 @@ function respond() {
 
 function whatisMessage() {
 var botResponse, options, body, botReq;
-var botResponse = JSON.parse(this.req.chunks[0]);
+var botResponse = "fucking end me";
 
 options = {
     hostname: 'api.groupme.com',
