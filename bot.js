@@ -90,7 +90,7 @@ function helpMessage() {
 
   body = {
     "bot_id" : botID,
-    "text" : "hi"
+    "text" : helpResponse
   };
 
 console.log('sending ' + helpResponse + ' to ' + botID);
