@@ -40,10 +40,6 @@ function postMessage() {
     method: 'POST'
   };
 
-  body = {
-    "bot_id" : botID,
-    "text" : "hi"
-  };
 if (botAction = 1) {
   botResponse = hiResponse;
  } else if (botAction = 2) {
@@ -51,6 +47,10 @@ if (botAction = 1) {
  } else {
   botResponse = brokeResponse;
 }
+
+body = {
+   "bot_id" : botID,
+   "text" : botResponse
 
 console.log('sending ' + botResponse + ' to ' + botID);
 
