@@ -48,7 +48,7 @@ if (botAction = 1) {
   botResponse = hiResponse;
  } else if (botAction = 2) {
   botResponse = helpResponse;
- ) else {
+ } else {
   botResponse = brokeResponse;
 }
 
