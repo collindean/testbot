@@ -23,7 +23,7 @@ function respond() {
   } else if (request.text.slice(0,6) == botWeapon) {
     this.res.writeHead(200);
     botAction = 3;
-    console.log("baby don't hurt me");
+    whatisMessage();
     this.res.end();
     } else {
     console.log("don't care");
