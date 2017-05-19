@@ -65,6 +65,7 @@ function respond() {
       botHelp = /^\help$/,
       botWeapon = "whatis",
       botD12 = "roll";
+      botTime = "countdown";
       usrInput = request.text;
 
   if(request.text && botRegex.test(request.text)) {
@@ -87,13 +88,72 @@ function respond() {
     botAction = 4; 
     rollD12();
     this.res.end();
-  }else {
+   } else if (request.text == botTime)  {
+   this.res.writeHead(200);
+   botAction = 5;
+   countdownMessage();
+   this.res.end();
+   } else {
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
   }
 }
 
+function countdownMessage() {
+var d = new Date();
+var n = d.getDay();
+var h = getHours();
+var m = getMinutes();
+var s = getSeconds();
+var secondsLeft = 60 - s;
+var minutesLeft = 60 - m;
+var hoursLeft = 24 - h;
+var daysLeft = 6 - n;
+if (secondsLeft > 0) { 
+minutesLeft -= 1;
+}
+if (minutesLeft > 0) {
+hoursLeft -= 1;
+} 
+if (hoursLeft > 0  {
+daysLeft -= 1;
+}
+botReponse = daysLeft + " days, " + hoursLeft + " hours, " + minutesLeft + " minutes, and " + secondsLeft + " seconds left until next session.";
+
+var botResponse, options, body, botReq;
+
+  botResponse = cool();
+
+  options = {
+    hostname: 'api.groupme.com',
+    path: '/v3/bots/post',
+    method: 'POST'
+  };
+
+  body = {
+    "bot_id" : botID,
+    "text" : botResponse
+  };
+
+  console.log('sending ' + botResponse + ' to ' + botID);
+
+  botReq = HTTPS.request(options, function(res) {
+      if(res.statusCode == 202) {
+        //neat
+      } else {
+        console.log('rejecting bad status code ' + res.statusCode);
+      }
+  });
+
+  botReq.on('error', function(err) {
+    console.log('error posting message '  + JSON.stringify(err));
+  });
+  botReq.on('timeout', function(err) {
+    console.log('timeout posting message '  + JSON.stringify(err));
+  });
+  botReq.end(JSON.stringify(body));
+}
 function rollD12() {
 var botResponse, options, body, botReq;
 var rollAttempt = Math.floor((Math.random()*12)+1);
