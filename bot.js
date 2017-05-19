@@ -61,20 +61,20 @@ rolled12 = false
 var rollTurnout;
 
 if (rollAttempt >= 50) {
-	rollTurnout == "Tier 6, you won life.";
+	rollTurnout = "Tier 6, you won life.";
 } else if (rollAttempt >= 40) {
-	rollTurnout == "Tier 5, that's godlike!!!";
+	rollTurnout = "Tier 5, that's godlike!!!";
 } else if (rollAttempt >= 30) {
-	rollTurnout == "Tier 4, that's amazing!!";
+	rollTurnout = "Tier 4, that's amazing!!";
 } else if (rollAttempt >= 20) { 
-	rollTurnout == "Tier 3, that's good!";
+	rollTurnout = "Tier 3, that's good!";
 } else if (rollAttempt >= 10) { 
-	rollTurnout == "Tier 2, you made it, just barely";
+	rollTurnout = "Tier 2, you made it, just barely";
 } else if (rollAttempt >= 2) { 
-	rollTurnout == "Tier 1, you might be ok?";
+	rollTurnout = "Tier 1, you might be ok?";
 } else if (rollAttempt = 1) { 
 	rollTurnout == "lol you fucking suck";
-} else { rollTurnout == "i'm not sure what happened here";
+} else { rollTurnout = "i'm not sure what happened here";
 }
 
 botResponse = "You rolled a " + rollTotal + ". " + rollTurnout;
