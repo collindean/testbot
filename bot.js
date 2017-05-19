@@ -10,7 +10,7 @@ function respond() {
       botRegex = /^\hi bot$/,
       botHelp = /^\help$/,
       botWeapon = "whatis",
-      botD12 = /^\roll$/;
+      botD12 = "roll";
       usrInput = request.text;
 
   if(request.text && botRegex.test(request.text)) {
