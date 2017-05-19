@@ -103,9 +103,9 @@ function respond() {
 function countdownMessage() {
 var d = new Date();
 var n = d.getDay();
-var h = getHours();
-var m = getMinutes();
-var s = getSeconds();
+var h = d.getHours();
+var m = d.getMinutes();
+var s = d.getSeconds();
 var secondsLeft = 60 - s;
 var minutesLeft = 60 - m;
 var hoursLeft = 24 - h;
