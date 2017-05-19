@@ -48,14 +48,15 @@ var rolled12 = false;
 if (rollAttempt <= 12) {
 	rolled12 = true;
 }
-
+/*
 while (rollAttempt = true) {
 rollAttempt = Math.floor((Math.random()*12)+1);
 rollTotal += rollAttempt;
 if (rollAttempt > 12) {
-	rolled12 = false
+rolled12 = false
 }
 }
+*/
 
 var rollTurnout;
 
