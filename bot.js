@@ -271,7 +271,7 @@ function helpMessage() {
 
   botResponse = "can i help you?";
   var hiResponse = "hi";
-  var helpResponse = "well i CAN help";
+  var helpResponse = "hello, my name is helpo robo, i am just a figment of all of your imagination to help you through this scary adventure. you can issue me commands. for example, if you say 'roll', i will roll a single d12 for you (i'm not advanced enough to accumulate rolls yet). if you say whatis light armor, i will tell you the specifics of whatever you're asking about. beep boop thank youp for supporting your nearby buddy, helpo robo.";
   var brokeResponse = "congrats, you broke me";
 
   botResponse = helpResponse;
