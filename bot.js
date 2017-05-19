@@ -112,7 +112,7 @@ options = {
 
 function whatisMessage() {
 var botResponse, options, body, botReq;
-var slicedText = usrInput.slice(6);
+var slicedText = usrInput.slice(7);
 var botResponse = slicedText;
 var troy = "gay";
 
