@@ -51,6 +51,7 @@ if (botAction = 1) {
 body = {
    "bot_id" : botID,
    "text" : botResponse
+};
 
 console.log('sending ' + botResponse + ' to ' + botID);
 
