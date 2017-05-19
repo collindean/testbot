@@ -127,7 +127,7 @@ if (rollAttempt >= 50) {
 } else if (rollAttempt >= 2) { 
 	rollTurnout = "Tier 1, you might be ok?";
 } else if (rollAttempt = 1) { 
-	rollTurnout == "lol you fucking suck";
+	rollTurnout = "lol you fucking suck";
 } else { rollTurnout = "i'm not sure what happened here";
 }
 
