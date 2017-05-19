@@ -112,7 +112,7 @@ function countdownMessage() {
      var hoursLeft = 24 - h;
      var daysLeft = 6 - n;
 
-    /* if (secondsLeft > 0) { 
+    if (secondsLeft > 0) { 
        minutesLeft -= 1;
      }
 
@@ -123,7 +123,7 @@ function countdownMessage() {
      if (hoursLeft > 0)  {
        daysLeft -= 1;
      }  
-*/
+
      var botResponse, options, body, botReq;
 
  /*    botReponse = daysLeft + " days, " + hoursLeft + " hours, " + minutesLeft + " minutes, and " + secondsLeft + " seconds left until next session.";
