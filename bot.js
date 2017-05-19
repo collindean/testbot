@@ -11,7 +11,7 @@ function respond() {
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    botAction = 1;
+    botAction = 0;
     postMessage();
     this.res.end();
   } else if(request.text && botHelp.test(request.text)) {
@@ -41,7 +41,7 @@ function postMessage() {
   };
 
 if (botAction = 1) {
-  botResponse = helpResponse;
+  botResponse = hiResponse;
  } else if (botAction = 2) {
   botResponse = helpResponse;
  } else {
