@@ -7,7 +7,7 @@ var usrInput;
 var mocktext;
 
 function mock() {
-var request = JSON.parse(this.req.chunks[0]);
+/* ar request = JSON.parse(this.req.chunks[0]);
 var willidoit = Math.floor((Math.random() * 100 + 1));
 if (willidoit = 100){
 	Random rnd = new Random();
@@ -19,6 +19,8 @@ if (willidoit = 100){
 			: Character.toUpperCase(c));
 	mocktext = request;
 	mockMessage();
+} 
+*/
 }
 
 function mockMessage() {
