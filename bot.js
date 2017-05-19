@@ -34,7 +34,7 @@ function respond() {
 
 function whatisMessage() {
 var botResponse, options, body, botReq;
-var botResponse = request;
+var botResponse = JSON.parse(this.req.chunks[0]);
 
 options = {
     hostname: 'api.groupme.com',
