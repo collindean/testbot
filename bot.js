@@ -41,7 +41,7 @@ function postMessage() {
   };
 
 if (botAction = 1) {
-  botResponse = hiResponse;
+  botResponse = helpResponse;
  } else if (botAction = 2) {
   botResponse = helpResponse;
  } else {
