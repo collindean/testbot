@@ -61,17 +61,17 @@ var rollTurnout;
 
 if (rollAttempt >= 50) {
 	rollTurnout == "Tier 6, you won life.";
-} else if (rollAttempt >= 40 {
+} else if (rollAttempt >= 40) {
 	rollTurnout == "Tier 5, that's godlike!!!";
-} else if (rollAttempt >= 30 {
+} else if (rollAttempt >= 30) {
 	rollTurnout == "Tier 4, that's amazing!!";
-} else if (rollAttempt >= 20 { 
+} else if (rollAttempt >= 20) { 
 	rollTurnout == "Tier 3, that's good!";
-} else if (rollAttempt >= 10 { 
+} else if (rollAttempt >= 10) { 
 	rollTurnout == "Tier 2, you made it, just barely";
-} else if (rollAttempt >= 2 { 
+} else if (rollAttempt >= 2) { 
 	rollTurnout == "Tier 1, you might be ok?";
-} else if (rollAttempt = 1 { 
+} else if (rollAttempt = 1) { 
 	rollTurnout == "lol you fucking suck";
 } else { rollTurnout == "i'm not sure what happened here";
 }
