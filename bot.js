@@ -101,28 +101,32 @@ function respond() {
 }
 
 function countdownMessage() {
-var d = new Date();
-var n = d.getDay();
-var h = d.getHours();
-var m = d.getMinutes();
-var s = d.getSeconds();
-var secondsLeft = 60 - s;
-var minutesLeft = 60 - m;
-var hoursLeft = 24 - h;
-var daysLeft = 6 - n;
-if (secondsLeft > 0) { 
-minutesLeft -= 1;
-}
-if (minutesLeft > 0) {
-hoursLeft -= 1;
-} 
-if (hoursLeft > 0)  {
-daysLeft -= 1;
-}
+     var d = new Date.now();
+     var n = d.getDay();
+     var h = d.getHours();
+     var m = d.getMinutes();
+     var s = d.getSeconds();
 
-var botResponse, options, body, botReq;
+     var secondsLeft = 60 - s;
+     var minutesLeft = 60 - m;
+     var hoursLeft = 24 - h;
+     var daysLeft = 6 - n;
 
-botReponse = daysLeft + " days, " + hoursLeft + " hours, " + minutesLeft + " minutes, and " + secondsLeft + " seconds left until next session.";
+     if (secondsLeft > 0) { 
+       minutesLeft -= 1;
+     }
+
+     if (minutesLeft > 0) {
+       hoursLeft -= 1;
+     }
+
+     if (hoursLeft > 0)  {
+       daysLeft -= 1;
+     }  
+
+     var botResponse, options, body, botReq;
+
+     botReponse = daysLeft + " days, " + hoursLeft + " hours, " + minutesLeft + " minutes, and " + secondsLeft + " seconds left until next session.";
 
   options = {
     hostname: 'api.groupme.com',
