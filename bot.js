@@ -3,14 +3,14 @@ var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
 var botAction;
-var usrInput = JSON.parse(this.req.chunks[0]),
-	randomshit = /^\garb$/;
+var usrInput;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\hi bot$/,
       botHelp = /^\help$/,
-      botWeapon = "whatis";      
+      botWeapon = "whatis";
+      usrInput = request.text;
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
