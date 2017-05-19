@@ -128,7 +128,7 @@ function countdownMessage() {
 
  /*    botReponse = daysLeft + " days, " + hoursLeft + " hours, " + minutesLeft + " minutes, and " + secondsLeft + " seconds left until next session.";
 */
-	botResponse = daysLeft;
+	botResponse = daysLeft + " days left.";
   options = {
     hostname: 'api.groupme.com',
     path: '/v3/bots/post',
@@ -158,6 +158,7 @@ function countdownMessage() {
   });
   botReq.end(JSON.stringify(body));
 }
+
 function rollD12() {
 var botResponse, options, body, botReq;
 var rollAttempt = Math.floor((Math.random()*12)+1);
