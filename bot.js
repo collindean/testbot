@@ -109,7 +109,7 @@ function countdownMessage() {
 
      var secondsLeft = 60 - s;
      var minutesLeft = 60 - m;
-     var hoursLeft = 17 - h;
+     var hoursLeft = 18 - h;
      var daysLeft = 6 - n;
 
     if (secondsLeft > 0) { 
