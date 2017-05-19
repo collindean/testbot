@@ -8,10 +8,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\hi bot$/,
       botHelp = /^\help$/,
-      botWeapon = /^\whatis$/;
-
-  var usrtext = request.text.ToLowerCase();
-      
+      botWeapon = /^\whatis$/;      
 
   if(request.text && botRegex.test(request.text) {
     this.res.writeHead(200);
@@ -37,7 +34,6 @@ function respond() {
 
 function whatisMessage() {
 var request = JSON.parse(this.req.chunks[0]);
-var usrtext = request.text;
 
 }
 
