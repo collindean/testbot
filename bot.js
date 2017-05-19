@@ -38,9 +38,10 @@ function whatisMessage() {
 var botResponse, options, body, botReq;
 var slicedText = usrInput.slice(6);
 var botResponse = "i don't know, you tell me";
+var troy = "gay";
 
 if (slicedText == "troy") {
-     botResponse = "gay";
+     botResponse = troy;
 } else if (slicedText == "vis") {
      botResponse = "Vis is a currency in this universe, which can be farmed/mined from many resources. It can be found in water, vains, and many other options that I don't know.";
 } else if (slicedText == "light armor") {
