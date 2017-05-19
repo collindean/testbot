@@ -57,6 +57,7 @@ var botResponse, options, body, botReq;
 }
 
 function respond() {
+	mock();
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\hi bot$/,
       botHelp = /^\help$/,
@@ -84,7 +85,7 @@ function respond() {
     botAction = 4; 
     rollD12();
     this.res.end();
-  } else {
+  }else {
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
