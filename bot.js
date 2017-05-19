@@ -34,7 +34,7 @@ function respond() {
 
 function whatisMessage() {
 var request = JSON.parse(this.req.chunks[0]);
-var usrinput = request.text.toString();
+var usrinput = "fucking end me";
 
 options = {
     hostname: 'api.groupme.com',
