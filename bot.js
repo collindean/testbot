@@ -2,7 +2,7 @@ var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
-var botAction = 0;
+var botAction;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
@@ -11,7 +11,7 @@ function respond() {
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    botAction = 0;
+    botAction = 1;
     postMessage();
     this.res.end();
   } else if(request.text && botHelp.test(request.text)) {
