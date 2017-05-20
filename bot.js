@@ -81,7 +81,6 @@ function respond() {
       botTime = "!countdown";
       
       usrInput = request.text.toString();
-      usrInput = usrInput.toLowercase();
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
