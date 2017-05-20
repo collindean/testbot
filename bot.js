@@ -92,7 +92,7 @@ function respond() {
     botAction = 2;
     helpMessage();
     this.res.end();    
-  } else if (request.text.slice(0,6) == botWeapon) {
+  } else if (request.text.slice(0,7) == botWeapon) {
     this.res.writeHead(200);
     botAction = 3;
     whatisMessage();
@@ -248,7 +248,7 @@ options = {
 
 function whatisMessage() {
 var botResponse, options, body, botReq;
-var slicedText = usrInput.slice(7);
+var slicedText = usrInput.slice(8);
 var botResponse = slicedText;
 var troy = "gay";
 
