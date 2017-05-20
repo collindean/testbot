@@ -116,8 +116,6 @@ function respond() {
 
 function countdownMessage() {
      var d = new Date();
-     var w = d.getUTCMilliseconds() - 21600000;
-     d.setTime(w);
      var n = d.getDay();
      var h = d.getHours();
      var m = d.getMinutes();
@@ -144,10 +142,7 @@ function countdownMessage() {
 
  /*    botReponse = daysLeft + " days, " + hoursLeft + " hours, " + minutesLeft + " minutes, and " + secondsLeft + " seconds left until next session.";
 */
-	/*botResponse = daysLeft + " days, " + hoursLeft + " hours, " + minutesLeft + " minutes, and " + secondsLeft + " seconds remaining until next session";
-	 * */
-
-	botResponse = w;
+	botResponse = daysLeft + " days, " + hoursLeft + " hours, " + minutesLeft + " minutes, and " + secondsLeft + " seconds remaining until next session";
   options = {
     hostname: 'api.groupme.com',
     path: '/v3/bots/post',
