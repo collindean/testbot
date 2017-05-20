@@ -80,7 +80,8 @@ function respond() {
       botD12 = "!roll";
       botTime = "!countdown";
       
-      usrInput = request.text.toLowerCase();
+      usrInput = request.text;
+      usrInput = usrInput.toLowercase();
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -180,18 +181,19 @@ var botResponse, options, body, botReq;
 var rollAttempt = Math.floor((Math.random()*12)+1);
 var rollTotal = rollAttempt;
 var rolled12 = false;
-if (rollAttempt <= 12) {
+
+if (rollAttempt >= 12) {
 	rolled12 = true;
 }
-/*
-while (rollAttempt = true) {
+
+while (rolled12 = true) {
 rollAttempt = Math.floor((Math.random()*12)+1);
 rollTotal += rollAttempt;
 if (rollAttempt > 12) {
 rolled12 = false
 }
 }
-*/
+
 
 var rollTurnout;
 
