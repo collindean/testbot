@@ -5,6 +5,7 @@ var botID = process.env.BOT_ID;
 var botAction;
 var usrInput;
 var mocktext;
+var quoteNum;
 
 function mock() {
 /* ar request = JSON.parse(this.req.chunks[0]);
@@ -21,6 +22,18 @@ if (willidoit = 100){
 	mockMessage();
 } 
 */
+ 
+}
+
+function quoteMessage() {
+troyQuote = "";
+ianQuote = "";
+terrenceQuote = "";
+bethQuote = ""; 
+jeremyQuote = "";
+jesseQuote = "";
+
+
 }
 
 function mockMessage() {
@@ -61,12 +74,13 @@ var botResponse, options, body, botReq;
 function respond() {
 	mock();
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\hi bot$/,
-      botHelp = /^\help$/,
-      botWeapon = "whatis",
-      botD12 = "roll";
-      botTime = "countdown";
-      usrInput = request.text;
+      botRegex = /^\!hi bot$/,
+      botHelp = /^\!help$/,
+      botWeapon = "!whatis",
+      botD12 = "!roll";
+      botTime = "!countdown";
+      
+      usrInput = request.text.toLowerCase();
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
