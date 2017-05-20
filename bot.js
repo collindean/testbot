@@ -80,7 +80,7 @@ function respond() {
       botD12 = "!roll";
       botTime = "!countdown";
       
-      usrInput = request.text;
+      usrInput = request.text.toString();
       usrInput = usrInput.toLowercase();
 
   if(request.text && botRegex.test(request.text)) {
