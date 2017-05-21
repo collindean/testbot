@@ -83,7 +83,7 @@ function respond() {
     botAction = 2;
     helpMessage();
     this.res.end();    
-  } else if (request.text.slice(0,6) == botWeapon) {
+  } else if (request.text.slice(0,7) == botWeapon) {
     this.res.writeHead(200);
     botAction = 3;
     whatisMessage();
