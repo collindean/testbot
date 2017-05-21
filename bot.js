@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 var botAction;
 var usrInput;
 var mocktext;
-var quoteNum;
+var botResponse;
 
 function mock() {
 /* ar request = JSON.parse(this.req.chunks[0]);
@@ -18,22 +18,10 @@ if (willidoit = 100){
 		sb.append(rnd.nextBoolean()
 			? Character.toLowerCase(c)
 			: Character.toUpperCase(c));
-	mocktext = request;
+			mocktext = request;
 	mockMessage();
 } 
 */
- 
-}
-
-function quoteMessage() {
-troyQuote = "";
-ianQuote = "";
-terrenceQuote = "";
-bethQuote = ""; 
-jeremyQuote = "";
-jesseQuote = "";
-
-
 }
 
 function mockMessage() {
@@ -79,8 +67,8 @@ function respond() {
       botWeapon = "!whatis",
       botD12 = "!roll";
       botTime = "!countdown";
-      
-      usrInput = request.text.toString();
+      botDrive = "!drive"
+      usrInput = request.text;
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -92,7 +80,7 @@ function respond() {
     botAction = 2;
     helpMessage();
     this.res.end();    
-  } else if (request.text.slice(0,7) == botWeapon) {
+  } else if (request.text.slice(0,6) == botWeapon) {
     this.res.writeHead(200);
     botAction = 3;
     whatisMessage();
@@ -114,8 +102,51 @@ function respond() {
   }
 }
 
+function driveMessage() {
+     var dl = "https://drive.google.com/drive/u/0/folders/0B2A5VZKUJWLaTnFBQ3QwbXNTSTg";
+     botResponse = dl;
+}
+
+function sendMessage() {
+var options, body, botReq;
+
+
+
+  options = {
+    hostname: 'api.groupme.com',
+    path: '/v3/bots/post',
+    method: 'POST'
+  };
+
+  body = {
+    "bot_id" : botID,
+    "text" : botResponse
+  };
+
+  console.log('sending ' + botResponse + ' to ' + botID);
+
+  botReq = HTTPS.request(options, function(res) {
+      if(res.statusCode == 202) {
+        //neat
+      } else {
+        console.log('rejecting bad status code ' + res.statusCode);
+      }
+  });
+  botReq.on('error', function(err) {
+    console.log('error posting message '  + JSON.stringify(err));
+  });
+  botReq.on('timeout', function(err) {
+    console.log('timeout posting message '  + JSON.stringify(err));
+  });
+  botReq.end(JSON.stringify(body));
+}
+
+
+
 function countdownMessage() {
      var d = new Date();
+     var w = d.getUTCMilliseconds() - 21600000;
+     d.setTime(w);
      var n = d.getDay();
      var h = d.getHours();
      var m = d.getMinutes();
@@ -142,7 +173,7 @@ function countdownMessage() {
 
  /*    botReponse = daysLeft + " days, " + hoursLeft + " hours, " + minutesLeft + " minutes, and " + secondsLeft + " seconds left until next session.";
 */
-	botResponse = daysLeft + " days, " + hoursLeft + " hours, " + minutesLeft + " minutes, and " + secondsLeft + " seconds remaining until next session";
+	botResponse = daysLeft + " days, " + hoursLeft + " hours, " + minutesLeft + " minutes, and " + secondsLeft + " seconds reminaing until next session";
   options = {
     hostname: 'api.groupme.com',
     path: '/v3/bots/post',
@@ -178,19 +209,18 @@ var botResponse, options, body, botReq;
 var rollAttempt = Math.floor((Math.random()*12)+1);
 var rollTotal = rollAttempt;
 var rolled12 = false;
-
-if (rollAttempt >= 12) {
+if (rollAttempt <= 12) {
 	rolled12 = true;
 }
-
-while (rolled12 = true) {
+/*
+while (rollAttempt = true) {
 rollAttempt = Math.floor((Math.random()*12)+1);
 rollTotal += rollAttempt;
 if (rollAttempt > 12) {
 rolled12 = false
 }
 }
-
+*/
 
 var rollTurnout;
 
@@ -246,7 +276,7 @@ options = {
 
 function whatisMessage() {
 var botResponse, options, body, botReq;
-var slicedText = usrInput.slice(8);
+var slicedText = usrInput.slice(7);
 var botResponse = slicedText;
 var troy = "gay";
 
