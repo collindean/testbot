@@ -238,7 +238,7 @@ function countdownMessage() {
 
 function rollD12() {
 var botResponse, options, body, botReq;
-var rollAttempt;
+var rollAttempt += Math.floor((Math.random()*12)+1);
 var rollTotal = rollAttempt;
 var rolled12 = false;
 if (rollAttempt <= 12) {
