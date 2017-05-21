@@ -126,11 +126,11 @@ function sendPicture() {
 options = {
 	hostname: 'api.groupme.com',
 	path: '/v3/bots/post',
-	method: 'POST;
+	method: 'POST';
 };
 
 body = {
-	"bot_id" : botID
+	"bot_id" : botID;
 
 }
 
