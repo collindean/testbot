@@ -96,7 +96,7 @@ function respond() {
    countdownMessage();
    this.res.end();
    } else if (request.text == botDrive) {
-    this.res.writehead(200);
+    this.res.writeHead(200);
     driveMessage();
     this.res.end();
    }else {
