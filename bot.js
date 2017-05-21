@@ -95,7 +95,11 @@ function respond() {
    botAction = 5;
    countdownMessage();
    this.res.end();
-   } else {
+   } else if {
+    this.res.writehead(200);
+    driveMessage();
+    this.res.end();
+   }else {
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
@@ -105,6 +109,7 @@ function respond() {
 function driveMessage() {
      var dl = "https://drive.google.com/drive/u/0/folders/0B2A5VZKUJWLaTnFBQ3QwbXNTSTg";
      botResponse = dl;
+     sendMessage();
 }
 
 function sendMessage() {
