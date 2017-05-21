@@ -95,7 +95,7 @@ function respond() {
    botAction = 5;
    countdownMessage();
    this.res.end();
-   } else if {
+   } else if (request.text == botDrive) {
     this.res.writehead(200);
     driveMessage();
     this.res.end();
