@@ -219,6 +219,11 @@ if (rollAttempt <= 12) {
 	rolled12 = true;
 }
 
+do {
+    rollAttempt += Math.floor((Math.random()*12)+1);
+}
+while (rolled12 = false); 
+
 var rollTurnout;
 
 if (rollAttempt >= 50) {
