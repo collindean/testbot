@@ -6,6 +6,7 @@ var botAction;
 var usrInput;
 var mocktext;
 var botResponse;
+var quoteChosen;
 
 function mock() {
 /* ar request = JSON.parse(this.req.chunks[0]);
@@ -217,7 +218,7 @@ var rolled12 = false;
 if (rollAttempt <= 12) {
 	rolled12 = true;
 }
-/*
+
 while (rollAttempt = true) {
 rollAttempt = Math.floor((Math.random()*12)+1);
 rollTotal += rollAttempt;
@@ -225,7 +226,7 @@ if (rollAttempt > 12) {
 rolled12 = false
 }
 }
-*/
+
 
 var rollTurnout;
 
