@@ -122,7 +122,7 @@ sendPicture();
 }
 
 function sendPicture() {
-	var options, body, botReq;
+/*	var options, body, botReq;
 options = {
 	hostname: 'api.groupme.com',
 	path: '/v3/bots/post',
@@ -131,7 +131,7 @@ options = {
 
 body = {
 	"bot_id" : botID;
-
+*/
 }
 
 function milkfedBoys() {
