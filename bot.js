@@ -7,6 +7,7 @@ var usrInput;
 var mocktext;
 var botResponse;
 var quoteChosen;
+var picUrl;
 
 function mock() {
 /* ar request = JSON.parse(this.req.chunks[0]);
@@ -24,6 +25,7 @@ if (willidoit = 100){
 } 
 */
 }
+
 
 function mockMessage() {
 var botResponse, options, body, botReq;
@@ -112,6 +114,30 @@ function driveMessage() {
      botResponse = dl;
      sendMessage();
 }
+
+function quoteMessage() {
+var collinPic = "https://m.popkey.co/a72599/K0rX8_f-thumbnail-100-0_s-600x0.jpg";
+picUrl = collinPic;
+sendPicture();
+}
+
+function sendPicture() {
+	var options, body, botReq;
+options = {
+	hostname: 'api.groupme.com',
+	path: '/v3/bots/post',
+	method: 'POST;
+};
+
+body = {
+	"bot_id" : botID
+
+}
+
+function milkfedBoys() {
+
+}
+
 
 function sendMessage() {
 var options, body, botReq;
@@ -212,7 +238,7 @@ function countdownMessage() {
 
 function rollD12() {
 var botResponse, options, body, botReq;
-var rollAttempt = Math.floor((Math.random()*12)+1);
+var rollAttempt;
 var rollTotal = rollAttempt;
 var rolled12 = false;
 if (rollAttempt <= 12) {
@@ -243,7 +269,7 @@ if (rollAttempt >= 50) {
 } else { rollTurnout = "i'm not sure what happened here";
 }
 
-botResponse = "You rolled a " + rollTotal + ". " + rollTurnout;
+botResponse = "You rolled a " + rollAttempt + ". " + rollTurnout;
 
 options = {
     hostname: 'api.groupme.com',
