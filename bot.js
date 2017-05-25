@@ -276,7 +276,7 @@ options = {
 
 function whatisMessage() {
 var slicedText = usrInput.slice(8);
-var botResponse = slicedText;
+botResponse = slicedText;
 var troy = "gay";
 
 if (slicedText == "troy") {
