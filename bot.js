@@ -199,41 +199,12 @@ function countdownMessage() {
 
      if (hoursLeft > 0)  {
        daysLeft -= 1;
-     }  
-
-     var botResponse, options, body, botReq;
+     } 
 
  /*    botReponse = daysLeft + " days, " + hoursLeft + " hours, " + minutesLeft + " minutes, and " + secondsLeft + " seconds left until next session.";
 */
 	botResponse = daysLeft + " days, " + hoursLeft + " hours, " + minutesLeft + " minutes, and " + secondsLeft + " seconds reminaing until next session";
-  options = {
-    hostname: 'api.groupme.com',
-    path: '/v3/bots/post',
-    method: 'POST'
-  };
-
-  body = {
-    "bot_id" : botID,
-    "text" : botResponse
-  };
-
-  console.log('sending ' + botResponse + ' to ' + botID);
-
-  botReq = HTTPS.request(options, function(res) {
-      if(res.statusCode == 202) {
-        //neat
-      } else {
-        console.log('rejecting bad status code ' + res.statusCode);
-      }
-  });
-
-  botReq.on('error', function(err) {
-    console.log('error posting message '  + JSON.stringify(err));
-  });
-  botReq.on('timeout', function(err) {
-    console.log('timeout posting message '  + JSON.stringify(err));
-  });
-  botReq.end(JSON.stringify(body));
+ sendMessage();
 }
 
 function rollD12() {
@@ -304,7 +275,6 @@ options = {
 	
 
 function whatisMessage() {
-var botResponse, options, body, botReq;
 var slicedText = usrInput.slice(8);
 var botResponse = slicedText;
 var troy = "gay";
@@ -315,8 +285,10 @@ if (slicedText == "troy") {
      botResponse = "Vis is a currency in this universe, which can be farmed/mined from many resources. It can be found in water, vains, and many other options that I don't know.";
 } else if (slicedText == "light armor") {
      botResponse = "Soak class: 2, -1 evade, -5 movement speed, -5 climbing and swimming speed";
-} else if (slicedText == "medium armor") {
+} else if(slicedText == "medium armor") {
      botResponse = "Soak class: 3, -5 movement speed, -10 climbing and swimming speed";
+} else if (slicedText == "jesse" {
+     botResponse = "double gay";
 } else if (slicedText == "heavy armor") {
      botResponse = "Soak class: 4, -3 evade, -10 movement speed, -15 climbing and swimming speed";
 } else if (slicedText == "light melee") {
@@ -328,35 +300,7 @@ if (slicedText == "troy") {
 } else {
      botReponse = "i don't quite follow, try being coherent"; 
 }
-
-options = {
-    hostname: 'api.groupme.com',
-    path: '/v3/bots/post',
-    method: 'POST'
-  };
-
-body = {
-   "bot_id" : botID,
-   "text" : botResponse
-};
-
-console.log('sending ' + botResponse + ' to ' + botID);
-
-  botReq = HTTPS.request(options, function(res) {
-      if(res.statusCode == 202) {
-        //neat
-      } else {
-        console.log('rejecting bad status code ' + res.statusCode);
-      }
-  });
-
-  botReq.on('error', function(err) {
-    console.log('error posting message '  + JSON.stringify(err));
-  });
-  botReq.on('timeout', function(err) {
-    console.log('timeout posting message '  + JSON.stringify(err));
-  });
-  botReq.end(JSON.stringify(body));
+sendMessage();
 }
 
 function postMessage() {
