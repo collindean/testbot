@@ -38,7 +38,7 @@ function respond() {
       botHands = "hands";
       botCatch = "catch";
       botFight = "fight";
-      usrInput = request.text;
+      usrInput = str(request.text);
 
   if (request.text.includes(botFight || botHands || botCatch)) {
     this.res.writeHead(200);
