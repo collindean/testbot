@@ -287,7 +287,7 @@ if (slicedText == "troy") {
      botResponse = "Soak class: 2, -1 evade, -5 movement speed, -5 climbing and swimming speed";
 } else if(slicedText == "medium armor") {
      botResponse = "Soak class: 3, -5 movement speed, -10 climbing and swimming speed";
-} else if (slicedText == "jesse" {
+} else if (slicedText == "jesse") {
      botResponse = "double gay";
 } else if (slicedText == "heavy armor") {
      botResponse = "Soak class: 4, -3 evade, -10 movement speed, -15 climbing and swimming speed";
