@@ -26,42 +26,6 @@ if (willidoit = 100){
 */
 }
 
-
-function mockMessage() {
-var botResponse, options, body, botReq;
-
-  botResponse = mocktext;
-
-  options = {
-    hostname: 'api.groupme.com',
-    path: '/v3/bots/post',
-    method: 'POST'
-  };
-
-  body = {
-    "bot_id" : botID,
-    "text" : botResponse
-  };
-
-  console.log('sending ' + botResponse + ' to ' + botID);
-
-  botReq = HTTPS.request(options, function(res) {
-      if(res.statusCode == 202) {
-        //neat
-      } else {
-        console.log('rejecting bad status code ' + res.statusCode);
-      }
-  });
-
-  botReq.on('error', function(err) {
-    console.log('error posting message '  + JSON.stringify(err));
-  });
-  botReq.on('timeout', function(err) {
-    console.log('timeout posting message '  + JSON.stringify(err));
-  });
-  botReq.end(JSON.stringify(body));
-}
-
 function respond() {
 	mock();
   var request = JSON.parse(this.req.chunks[0]),
@@ -70,10 +34,17 @@ function respond() {
       botWeapon = "!whatis",
       botD12 = "!roll";
       botTime = "!countdown";
-      botDrive = "!drive"
+      botDrive = "!drive";
+      botHands = "hands";
+      botCatch = "catch";
+      botFight = "fight";
       usrInput = request.text;
 
-  if(request.text && botRegex.test(request.text)) {
+  if (request.text.includes(botFight || botHands || botCatch)) {
+    this.res.writeHead(200);
+    fightMessage();
+    this.res.end();
+  } else if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     botAction = 1;
     postMessage();
@@ -109,6 +80,19 @@ function respond() {
   }
 }
 
+function fightMessage () {
+	var randNum = Math.floor((Math.random()*3)+1);
+	if (randNum == 1) {
+		botResponse = "do you wanna fucking go kid? i'll destroy you";
+	else if (randNum == 2) {
+		botResponse = "oh look at this, a lil bitch is yelling at an inanimate object";
+	else {
+		botResponse = "What the fuck did you just fucking say about me, you little bitch? I’ll have you know I graduated top of my class in the Navy Seals, and I’ve been involved in numerous secret raids on Al-Quaeda, and I have over 300 confirmed kills. I am trained in gorilla warfare and I’m the top sniper in the entire US armed forces. You are nothing to me but just another target. I will wipe you the fuck out with precision the likes of which has never been seen before on this Earth, mark my fucking words. You think you can get away with saying that shit to me over the Internet? Think again, fucker. As we speak I am contacting my secret network of spies across the USA and your IP is being traced right now so you better prepare for the storm, maggot. The storm that wipes out the pathetic little thing you call your life. You’re fucking dead, kid. I can be anywhere, anytime, and I can kill you in over seven hundred ways, and that’s just with my bare hands. Not only am I extensively trained in unarmed combat, but I have access to the entire arsenal of the United States Marine Corps and I will use it to its full extent to wipe your miserable ass off the face of the continent, you little shit. If only you could have known what unholy retribution your little “clever” comment was about to bring down upon you, maybe you would have held your fucking tongue. But you couldn’t, you didn’t, and now you’re paying the price, you goddamn idiot. I will shit fury all over you and you will drown in it. You’re fucking dead, kiddo.";
+	{
+
+	sendMessage();
+}
+
 function driveMessage() {
      var dl = "https://drive.google.com/drive/u/0/folders/0B2A5VZKUJWLaTnFBQ3QwbXNTSTg";
      botResponse = dl;
@@ -141,8 +125,6 @@ function milkfedBoys() {
 
 function sendMessage() {
 var options, body, botReq;
-
-
 
   options = {
     hostname: 'api.groupme.com',
@@ -208,7 +190,6 @@ function countdownMessage() {
 }
 
 function rollD12() {
-var botResponse, options, body, botReq;
 var rollAttempt = 0;
 rollAttempt += Math.floor((Math.random()*12)+1);
 var rollTotal = rollAttempt;
@@ -242,35 +223,7 @@ if (rollAttempt >= 50) {
 }
 
 botResponse = "You rolled a " + rollAttempt + ". " + rollTurnout;
-
-options = {
-    hostname: 'api.groupme.com',
-    path: '/v3/bots/post',
-    method: 'POST'
-  };
-
-  body = {
-    "bot_id" : botID,
-    "text" : botResponse
-  };
-
-  console.log('sending ' + botResponse + ' to ' + botID);
-
-  botReq = HTTPS.request(options, function(res) {
-      if(res.statusCode == 202) {
-        //neat
-      } else {
-        console.log('rejecting bad status code ' + res.statusCode);
-      }
-  });
-
-  botReq.on('error', function(err) {
-    console.log('error posting message '  + JSON.stringify(err));
-  });
-  botReq.on('timeout', function(err) {
-    console.log('timeout posting message '  + JSON.stringify(err));
-  });
-  botReq.end(JSON.stringify(body));
+sendMessage();
 }
 	
 
@@ -313,90 +266,11 @@ if (slicedText == "troy") {
 sendMessage();
 }
 
-function postMessage() {
-  var botResponse, options, body, botReq;
-
-  botResponse = "can i help you?";
-  var hiResponse = "hi";
-  var helpResponse = "well i CAN help";
-  var brokeResponse = "congrats, you broke me";
-
-  options = {
-    hostname: 'api.groupme.com',
-    path: '/v3/bots/post',
-    method: 'POST'
-  };
-
-if (botAction = 1) {
-  botResponse = hiResponse;
- } else if (botAction = 2) {
-  botResponse = helpResponse;
- } else {
-  botResponse = brokeResponse;
-}
-
-body = {
-   "bot_id" : botID,
-   "text" : botResponse
-};
-
-console.log('sending ' + botResponse + ' to ' + botID);
-
-  botReq = HTTPS.request(options, function(res) {
-      if(res.statusCode == 202) {
-        //neat
-      } else {
-        console.log('rejecting bad status code ' + res.statusCode);
-      }
-  });
-
-  botReq.on('error', function(err) {
-    console.log('error posting message '  + JSON.stringify(err));
-  });
-  botReq.on('timeout', function(err) {
-    console.log('timeout posting message '  + JSON.stringify(err));
-  });
-  botReq.end(JSON.stringify(body));
-}
 
 function helpMessage() {
-  var botResponse, options, body, botReq;
-
-  botResponse = "can i help you?";
-  var hiResponse = "hi";
   var helpResponse = "hello, my name is helpo robo, i am just a figment of all of your imagination to help you through this scary adventure. you can issue me commands. for example, if you say 'roll', i will roll a single d12 for you (i'm not advanced enough to accumulate rolls yet). if you say whatis light armor, i will tell you the specifics of whatever you're asking about. beep boop thank youp for supporting your nearby buddy, helpo robo.";
-  var brokeResponse = "congrats, you broke me";
-
-  botResponse = helpResponse;
-
-  options = {
-    hostname: 'api.groupme.com',
-    path: '/v3/bots/post',
-    method: 'POST'
-  };
-
-  body = {
-    "bot_id" : botID,
-    "text" : helpResponse
-  };
-
-console.log('sending ' + helpResponse + ' to ' + botID);
-
-  botReq = HTTPS.request(options, function(res) {
-      if(res.statusCode == 202) {
-        //neat
-      } else {
-        console.log('rejecting bad status code ' + res.statusCode);
-      }
-  });
-
-  botReq.on('error', function(err) {
-    console.log('error posting message '  + JSON.stringify(err));
-  });
-  botReq.on('timeout', function(err) {
-    console.log('timeout posting message '  + JSON.stringify(err));
-  });
-  botReq.end(JSON.stringify(body));
+   botResponse = helpResponse;
+   sendMessage();
 }
 
 
