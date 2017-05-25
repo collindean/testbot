@@ -40,7 +40,7 @@ function respond() {
       botFight = "fight";
       usrInput = request.text.toString();
 
-  if (usrInput.includes(botFight || botHands || botCatch)) {
+  if (usrInput.search(botFight || botHands || botCatch) > 1) {
     this.res.writeHead(200);
     fightMessage();
     this.res.end();
