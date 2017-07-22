@@ -264,6 +264,8 @@ if (slicedText == "troy") {
     botResponse = "DC: 6, Equip AP: 1, Attack AP: 2, not concealable, and useable in one hand";
 } else if (slicedText == "heavy melee") { 
      botResponse = "DC: 8, Equip AP: 2, Attack: 2, not concealable, and requires two hands to wield effectively. One handing a heavy weapon results in a -4 to strike and accuracy rolls";
+} else if (slicedText == "life") {
+	botResponse = "to suffer";
 } else {
      botReponse = "i don't quite follow, try being coherent"; 
 }
