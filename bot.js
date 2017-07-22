@@ -232,7 +232,7 @@ sendMessage();
 	
 
 function whatisMessage() {
-var slicedText = usrInput.slice(8);
+var slicedText = usrInput.trim().slice(7);
 botResponse = slicedText;
 var troy = "gay";
 
